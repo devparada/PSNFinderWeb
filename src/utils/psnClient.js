@@ -1,8 +1,8 @@
-import { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } from "psn-api";
-
+import pkg from 'psn-api';
+import fetch from 'isomorphic-unfetch';
 import dotenv from 'dotenv';
-dotenv.config
 
+const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = pkg;
 dotenv.config();
 var TOKEN_PSN_ENV;
 // El username es recibido como parámetro

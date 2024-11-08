@@ -1,7 +1,6 @@
-import * as psn from 'psn-api';
-const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psn;
-
+import { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } from "psn-api";
 import dotenv from 'dotenv';
+
 dotenv.config();
 var TOKEN_PSN_ENV;
 // El username es recibido como parámetro

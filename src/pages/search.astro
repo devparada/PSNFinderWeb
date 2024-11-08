@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SearchUser from "../components/SearchUser.astro";
+
+const url = new URL(Astro.request.url);
+const user = url.searchParams.get('user');
 ---
 
 <Layout title="PSNFinder">
   <main>
     <div class="min-h-screen flex flex-col text-center justify-center">
-      <h1>Bienvenido a PSNFinder</h1>
-      <SearchUser />
+      <p class="text-2x1">Usuario encontrado: {user}</p>
     </div>
   </main>
 </Layout>
@@ -17,11 +18,5 @@ import SearchUser from "../components/SearchUser.astro";
     color: white;
     font-size: 20px;
     line-height: 1.6;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 0.5em;
   }
 </style>

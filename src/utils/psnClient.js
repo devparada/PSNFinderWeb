@@ -1,9 +1,6 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const psnApi = require('psn-api');
-import dotenv from 'dotenv';
+import { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } from 'psn-api';
 
-const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psnApi;
+import dotenv from 'dotenv';
 dotenv.config();
 var TOKEN_PSN_ENV;
 // El username es recibido como parámetro

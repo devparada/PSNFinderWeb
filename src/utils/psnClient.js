@@ -1,5 +1,8 @@
-import * as psn from 'psn-api';
-const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psn;
+import('psn-api').then(psn => {
+  const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psn;
+
+  // Resto de tu código
+});
 
 import dotenv from 'dotenv';
 

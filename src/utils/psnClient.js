@@ -1,7 +1,9 @@
-const psnApi = await import('psn-api');
-const { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } = psnApi;
+import * as psnApi from 'psn-api';
+import fetch from 'isomorphic-unfetch';
+import dotenv from 'dotenv';
 
-import dotenv from "dotenv";
+const { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } = psnApi;
+dotenv.config
 
 dotenv.config();
 var TOKEN_PSN_ENV;

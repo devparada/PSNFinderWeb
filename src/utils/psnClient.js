@@ -1,11 +1,8 @@
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url);
+import * as psn from 'psn-api';
 
-const psnApi = require('psn-api');
-const fetch = require('isomorphic-unfetch');
-const dotenv = require('dotenv');
+const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psn;
 
-const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psnApi;
+import dotenv from 'dotenv';
 
 dotenv.config();
 var TOKEN_PSN_ENV;

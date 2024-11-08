@@ -1,8 +1,6 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const psnApi = require('psn-api');
-
+const psnApi = await import('psn-api');
 const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psnApi;
+
 import dotenv from "dotenv";
 
 dotenv.config();

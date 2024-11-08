@@ -1,6 +1,5 @@
-const psnApi = require('psn-api');
-
-const { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } = psnApi;
+import psnApi from 'psn-api';
+const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psnApi;
 import dotenv from "dotenv";
 
 dotenv.config();

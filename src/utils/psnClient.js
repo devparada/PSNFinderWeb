@@ -1,4 +1,5 @@
-import { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } from "psn-api";
+import * as psnApi from 'psn-api';
+const { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } = psnApi;
 import dotenv from "dotenv";
 
 dotenv.config();

@@ -1,5 +1,4 @@
 import * as psn from 'psn-api';
-
 const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = psn;
 
 import dotenv from 'dotenv';

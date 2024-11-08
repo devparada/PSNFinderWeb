@@ -1,8 +1,6 @@
-import * as psnApi from 'psn-api';
-import fetch from 'isomorphic-unfetch';
-import dotenv from 'dotenv';
+import { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } from "psn-api";
 
-const { exchangeCodeForAccessToken, exchangeNpssoForCode, makeUniversalSearch, getUserTitles } = psnApi;
+import dotenv from 'dotenv';
 dotenv.config
 
 dotenv.config();

@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-unfetch';
 import { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } from "psn-api";
 import dotenv from 'dotenv';
 

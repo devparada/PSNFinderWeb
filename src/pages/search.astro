@@ -1,14 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { obtenerUsuarioData } from "../utils/psnClient";
 
 const url = new URL(Astro.request.url);
-const user = url.searchParams.get('user');
+const username = url.searchParams.get("user");
+
+let userData = null;
+if (username) {
+  userData = await obtenerUsuarioData(username);
+} else {
+  userData = { trophyTitles: [{ trophyTitleName: "Juego predeterminado" }] };
+}
 ---
 
 <Layout title="PSNFinder">
   <main>
     <div class="min-h-screen flex flex-col text-center justify-center">
-      <p class="text-2x1">Usuario encontrado: {user}</p>
+      <p class="text-2x1">Nombre del usuario buscado: {username}</p>
+      <p>
+        Primer juego buscado: {
+          userData?.trophyTitles?.[0]?.trophyTitleName || "No disponible"
+        }
+      </p>
     </div>
   </main>
 </Layout>

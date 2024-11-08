@@ -1,6 +1,5 @@
 {
   "name": "psn-finder-web",
-  "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",

@@ -1,5 +1,4 @@
-import fetch from 'isomorphic-unfetch';
-import { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } from "psn-api";
+const { exchangeNpssoForCode, exchangeCodeForAccessToken, makeUniversalSearch, getUserTitles } = require("psn-api");
 import dotenv from 'dotenv';
 
 dotenv.config();
